@@ -7,11 +7,11 @@ replicaCount: 2
 image:
   repository: ibmcom/guestbook
   tag: v1
-  pullPolicy: Always
+  pullPolicy: IfNotPresent
 
 # For some dev env (like minikube), you may need to set the type to NodePort
 service:
-  type: LoadBalancer
+  type: ClusterIP
   port: 3000
 
 redis:
